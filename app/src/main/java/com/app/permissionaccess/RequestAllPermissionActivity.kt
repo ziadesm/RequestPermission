@@ -8,22 +8,12 @@ class RequestAllPermissionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_request_all_permission)
-
-
-
-
-
-
+        
         RequestAccessPermission()
             .create(this)
             .permissions(arrayListOf(Manifest.permission.ACCESS_COARSE_LOCATION))
             .isRequired(true)
             .isSensitive(true)
             .build()
-
-
-
-
-
     }
 }
