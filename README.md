@@ -12,6 +12,37 @@ Please note that we have a code of conduct that we need to follow moving forward
 ## We Develop with Github
 We use github to host code, to track issues and feature requests, as well as accept pull requests.
 
+## How to use our code
+# Download
+--------
+Gradle:
+
+```gradle
+repositories {
+   google()
+   mavenCentral()
+   maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+   implementation 'com.github.ziadesm:RequestPermission:0.009.1'
+}
+```
+
+# Simple use of our RequestPermission
+```kotlin
+RequestAccessPermission()
+  .create(this)
+  .permissions(arrayListOf(Manifest.permission.ACCESS_COARSE_LOCATION))
+  .setDescription("Your Desc")
+  .setTitle("Your Title")
+  .setDrawables(arrayListOf(R.mipmap.ic_launcher))
+  .setImages(arrayListOf("https://www.yourimageurl.com"))
+  .isRequired(true)
+  .isSensitive(true)
+  .build()
+```
+
 ## We Use [Github Flow](https://guides.github.com/introduction/flow/index.html), So All Code Changes Happen Through Pull Requests
 
 Pull requests are the best way to propose changes to the codebase (we use [Github Flow](https://guides.github.com/introduction/flow/index.html)). We actively welcome your pull requests:
