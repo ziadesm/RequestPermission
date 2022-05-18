@@ -1,0 +1,5 @@
+<resources>
+    <string name="go_settings">Go Settings</string>
+    <string name="cancel_setting">Cancel</string>
+    <string name="take_all_permission">Take Permission</string>
+</resources>
